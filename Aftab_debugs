@@ -1,0 +1,51 @@
+Search functionality code snippet
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
+  };
+  const filteredVehicles = vehicles.filter(vehicle =>
+    vehicle.plate_number.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+Authentication issue
+import React, { useState } from 'react';
+import { Button, Form, Container } from 'react-bootstrap';
+import SignUp from './SignUp'; // Import SignUp component
+import Cookies from 'js-cookie';
+
+function LogIn() {
+  const [data, setData] = useState({
+    username: '',
+    password: '',
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setData({
+      ...data,
+      [name]: value,
+    });
+  };
+Styling inconsistency
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px; 
+}
+.table-container {
+  padding-top: 20px; 
+}
+
+.table-container table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-container th, .table-container td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.table-container th {
+  background-color: #f2f2f2;
+}
